@@ -1,0 +1,33 @@
+{
+  "name": "gridswebapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "node --import tsx scripts/verify_control_change_sync.ts && node --import tsx scripts/verify_zero_level_chaos_parity.ts && node --import tsx scripts/verify_density_knob_colors.ts && node --import tsx scripts/verify_playback_panel_presentation.ts && node --import tsx scripts/verify_sequencer_track_colors.ts && node --import tsx scripts/verify_fixed_regeneration_and_playhead_motion.ts && node --import tsx scripts/verify_playhead_scheduler_progress.ts && node --import tsx scripts/verify_playhead_indicator.ts && node --import tsx scripts/verify_sequencer_actions.ts && node --import tsx scripts/verify_xy_bank_architecture.ts && node --import tsx scripts/verify_browser_persistence_architecture.ts && node --import tsx scripts/verify_xy_bank_persistence.ts && node --import tsx scripts/verify_xy_navigation_no_drift.ts && node --import tsx scripts/verify_density_chaos_model.ts && node --import tsx scripts/verify_physical_knob_export_parity.ts && node --import tsx scripts/verify_chance_survives_chaos_regen.ts && node --import tsx scripts/verify_stable_chance_velocity_controls.ts && node --import tsx scripts/verify_velocity_chance_hardware_parity.ts && node --import tsx scripts/verify_hardware_chaos_model.ts && node --import tsx scripts/verify_xy_map_physical_labels.ts && node --import tsx scripts/verify_player_compatible_firmware_wav.ts && node --import tsx scripts/simulate_grids_bootloader_decode.ts && node --import tsx scripts/verify_stock_wav_byte_exact.ts && node --import tsx scripts/verify_firmware_wav_timing.ts && node --import tsx scripts/verify_full_qa_export.ts && node --import tsx scripts/verify_exported_firmware_plays_programmed_pattern.ts",
+    "prepare:github": "python3 scripts/package_source.py"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "tsx": "^4.23.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.9"
+  }
+}

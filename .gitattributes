@@ -1,0 +1,12 @@
+# Exclude local material even if it was tracked in an older commit.
+/.tmp export-ignore
+/.vendor export-ignore
+/.hermes export-ignore
+/.agents export-ignore
+/.aws export-ignore
+/.codex export-ignore
+/.cursor export-ignore
+/.wix export-ignore
+/GridsWebApp export-ignore
+/release export-ignore
+/QA_REPORT.md export-ignore
